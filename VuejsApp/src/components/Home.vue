@@ -1,17 +1,13 @@
 <template>
     <div class="home">
         <h1>{{ msg }}</h1>
-
-        <ul>
-            <li v-for="person in allPeople" v-bind:key="person._contentData.id">
-                {{person._contentData.name}}
-            </li>
-        </ul>
+        <People v-bind:items="allPeople" />
         <p>Welcome to your new single-page application, built with <a href="https://vuejs.org" target="_blank">Vue.js</a>.</p>
     </div>
 </template>
 
 <script>
+    import People from './People.vue';
     import { SIMPLE_QUERY } from '../constants/graphql'
 
     export default {
@@ -38,6 +34,9 @@
                     //return data.content.byType.People._contentData.children;
                 }
             }
+        },
+        components: {
+            People
         }
     };
 </script>
