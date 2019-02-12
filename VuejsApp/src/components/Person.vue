@@ -1,12 +1,13 @@
 ﻿<template>
-    <p>{{name}}</p>
+    <p>{{name}} <img v-bind:src="photoUrl" alt="Photo" /></p>
 </template>
 
 <script>
     export default {
         name: 'Person',
         props: {
-            name: String
+            name: String,
+            photoUrl: String
         }
     };
 </script>

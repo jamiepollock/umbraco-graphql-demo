@@ -2,7 +2,7 @@
     <section class="people">
         <ul v-if="items.length > 0">
             <li v-for="person in items" v-bind:key="person.id">
-                <Person v-bind:name="person.name" />
+                <Person v-bind:name="person.name" v-bind:photoUrl="person.photoUrl" />
             </li>
         </ul>
         <p v-if="!items">Nobody here!</p>
