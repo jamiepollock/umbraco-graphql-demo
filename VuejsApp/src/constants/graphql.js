@@ -2,8 +2,8 @@
 import gql from 'graphql-tag'
 
 // 2
-export const SIMPLE_QUERY = gql`
-query SimpleQuery {
+export const SIMPLE_PEOPLE_QUERY = gql`
+query SimplePeopleQuery {
   content {
     byType {
       People(id: "1116") {

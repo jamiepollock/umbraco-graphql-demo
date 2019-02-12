@@ -7,7 +7,7 @@
 
 <script>
     import People from './People.vue';
-    import { SIMPLE_QUERY } from '../constants/graphql'
+    import { SIMPLE_PEOPLE_QUERY } from '../constants/graphql'
 
     export default {
         name: 'Home',
@@ -22,7 +22,7 @@
         },
         apollo: {
             allPeople: {
-                query: SIMPLE_QUERY,
+                query: SIMPLE_PEOPLE_QUERY,
                 update: function (data) {
                     const component = this;
 
