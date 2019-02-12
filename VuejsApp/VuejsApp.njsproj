@@ -46,7 +46,11 @@
     <Content Include="src\components\Person.vue">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\pages\SimpleQuery.vue" />
     <Content Include="src\pages\Home.vue" />
+    <Content Include="src\pages\SimpleQueryWithFragments.vue">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dist\" />

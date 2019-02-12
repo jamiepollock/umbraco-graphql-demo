@@ -1,44 +1,17 @@
 ﻿<template>
     <div class="home">
         <h1 class="is-size-1">Home</h1>
-        <People v-bind:items="allPeople" />
+
+        <ul>
+            <li><router-link to="/SimpleQuery">Simple Query</router-link></li>
+            <li><router-link to="/Fragments">Simple Query (with Fragments)</router-link></li>
+        </ul>
     </div>
 </template>
 
 <script>
-    import People from '../components/People.vue';
-    import { SIMPLE_PEOPLE_QUERY } from '../constants/graphql'
-
     export default {
-        name: 'HomePage',
-        props: {
-            mediaAssetsRootUrl: String
-        },
-        data() {
-            return {
-                allPeople: [],
-                loading: 0
-            }
-        },
-        apollo: {
-            allPeople: {
-                query: SIMPLE_PEOPLE_QUERY,
-                update: function (data) {
-                    const component = this;
-
-                    return data.content.byType.People._contentData.children.items.map(function (item) {
-                        return {
-                            name: item._contentData.name,
-                            id: item._contentData.id,
-                            photoUrl: component.mediaAssetsRootUrl + item.photo._contentData.url
-                        };
-                    });
-                }
-            }
-        },
-        components: {
-            People
-        }
+        name: 'HomePage'
     };
 </script>
 

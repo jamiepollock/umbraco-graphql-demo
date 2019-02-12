@@ -39,14 +39,16 @@ const apolloProvider = new VueApollo({
 })
 
 
-
 import HomePage from './pages/Home.vue';
-//import Test from './pages/Test.vue';
+import SimpleQueryPage from './pages/SimpleQuery.vue';
+import SimpleQueryWithFragmentsPage from './pages/SimpleQueryWithFragments.vue';
 
 const mediaAssetsRootUrl = process.env.VUE_APP_MEDIA_ASSETS_ROOT_URL;
 
 const routes = [
-    { path: '/', component: HomePage, props: { mediaAssetsRootUrl } }
+    { path: '/', component: HomePage },
+    { path: '/SimpleQuery', component: SimpleQueryPage, props: { mediaAssetsRootUrl } },
+    { path: '/Fragments', component: SimpleQueryWithFragmentsPage, props: { mediaAssetsRootUrl } }
 ]
 
 const router = new VueRouter({

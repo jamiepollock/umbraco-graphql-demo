@@ -30,3 +30,33 @@ query SimplePeopleQuery {
     }
   }
 }`
+
+export const SIMPLE_PEOPLE_QUERY_FRAGMENTS = gql`
+query SimplePeopleQueryFragments {
+  content {
+    byType {
+      People(id: "1116") {
+        pageTitle
+        _contentData {
+          children {
+            items {
+              ... SimplePerson
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+fragment SimplePerson on Person {
+  photo {
+    _contentData {
+      url
+    }
+  }
+  _contentData{
+    name,
+    id
+  }
+}`
