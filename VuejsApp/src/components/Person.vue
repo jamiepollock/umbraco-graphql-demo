@@ -1,6 +1,6 @@
 ﻿<template>
     <div class="card">
-        <div class="card-image">
+        <div class="card-image" v-if="photoUrl">
             <figure class="image is-4by3">
                 <img v-bind:src="photoUrl" alt="Photo image">
             </figure>
