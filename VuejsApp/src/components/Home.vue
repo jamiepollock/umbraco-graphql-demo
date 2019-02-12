@@ -26,11 +26,13 @@
             allPeople: {
                 query: SIMPLE_QUERY,
                 update: function (data) {
+                    const component = this;
 
                     return data.content.byType.People._contentData.children.items.map(function (item) {
                         return {
                             name: item._contentData.name,
-                            id: item._contentData.id
+                            id: item._contentData.id,
+                            photoUrl: component.mediaAssetsRootUrl + item.photo._contentData.url
                         };
                     });
                     //return data.content.byType.People._contentData.children.map(function (child) {
