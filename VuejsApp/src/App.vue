@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <Home msg="People" />
+        <Home msg="People" v-bind:mediaAssetsRootUrl="mediaAssetsRootUrl" />
     </div>
 </template>
 
@@ -9,6 +9,11 @@
 
     export default {
         name: 'app',
+        data() {
+            return {
+                mediaAssetsRootUrl: process.env.VUE_APP_MEDIA_ASSETS_ROOT_URL
+            }
+        },
         components: {
             Home
         }
