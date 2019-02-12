@@ -13,7 +13,7 @@ Vue.config.productionTip = true;
 // 3
 const httpLink = new HttpLink({
     // You should use an absolute URL here
-    uri: 'http://umbraco.graphql.local/umbraco/graphql'
+    uri: process.env.VUE_APP_GRAPHQL_ENDPOINT
 })
 
 // 4
