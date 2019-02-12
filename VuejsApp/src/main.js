@@ -1,12 +1,19 @@
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
-import Vue from 'vue';
+import Vue from 'vue'
 
+import App from './App.vue';
+
+
+import VueRouter from 'vue-router'
 
 import VueApollo from 'vue-apollo'
 
-import App from './App.vue';
+
+
+Vue.use(VueRouter);
+Vue.use(VueApollo);
 
 Vue.config.productionTip = true;
 
@@ -23,7 +30,6 @@ const apolloClient = new ApolloClient({
     connectToDevTools: true
 })
 
-Vue.use(VueApollo)
 
 const apolloProvider = new VueApollo({
     defaultClient: apolloClient,
@@ -33,7 +39,22 @@ const apolloProvider = new VueApollo({
 })
 
 
+
+import HomePage from './pages/Home.vue';
+//import Test from './pages/Test.vue';
+
+const mediaAssetsRootUrl = process.env.VUE_APP_MEDIA_ASSETS_ROOT_URL;
+
+const routes = [
+    { path: '/', component: HomePage, props: { mediaAssetsRootUrl } }
+]
+
+const router = new VueRouter({
+    routes
+});
+
 new Vue({
+    router,
     apolloProvider,
     render: h => h(App)
-}).$mount('#app');
+}).$mount('#app')

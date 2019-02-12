@@ -33,11 +33,11 @@
     <Content Include=".env">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="libman.json" />
     <Content Include="public\css\bulma.min.css" />
     <Content Include="public\favicon.ico" />
     <Content Include="public\index.html" />
     <Content Include="src\App.vue" />
-    <Content Include="src\components\Home.vue" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="src\components\People.vue">
@@ -46,6 +46,7 @@
     <Content Include="src\components\Person.vue">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\pages\Home.vue" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dist\" />
@@ -55,6 +56,7 @@
     <Folder Include="src\assets\" />
     <Folder Include="src\components\" />
     <Folder Include="src\constants\" />
+    <Folder Include="src\pages\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="babel.config.js" />

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <div class="home">
         <h1 class="is-size-1">Home</h1>
         <People v-bind:items="allPeople" />
@@ -6,11 +6,11 @@
 </template>
 
 <script>
-    import People from './People.vue';
+    import People from '../components/People.vue';
     import { SIMPLE_PEOPLE_QUERY } from '../constants/graphql'
 
     export default {
-        name: 'Home',
+        name: 'HomePage',
         props: {
             mediaAssetsRootUrl: String
         },

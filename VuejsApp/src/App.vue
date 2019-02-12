@@ -10,7 +10,7 @@
         </header>
         <main class="section">
             <div class="container">
-                <Home v-bind:mediaAssetsRootUrl="mediaAssetsRootUrl" />
+                <router-view></router-view>
             </div>
         </main>
         <footer class="footer">
@@ -22,19 +22,6 @@
 </template>
 
 <script>
-    import Home from './components/Home.vue';
-
-    export default {
-        name: 'app',
-        data() {
-            return {
-                mediaAssetsRootUrl: process.env.VUE_APP_MEDIA_ASSETS_ROOT_URL
-            }
-        },
-        components: {
-            Home
-        }
-    };
 </script>
 
 <style>
