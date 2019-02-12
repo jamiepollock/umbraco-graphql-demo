@@ -34,11 +34,6 @@
                             photoUrl: component.mediaAssetsRootUrl + item.photo._contentData.url
                         };
                     });
-                    //return data.content.byType.People._contentData.children.map(function (child) {
-                    //    return child.node;
-                    //});
-
-                    //return data.content.byType.People._contentData.children;
                 }
             }
         },
