@@ -26,7 +26,12 @@
                 query: SIMPLE_QUERY,
                 update: function (data) {
 
-                    return data.content.byType.People._contentData.children.items;
+                    return data.content.byType.People._contentData.children.items.map(function (item) {
+                        return {
+                            name: item._contentData.name,
+                            id: item._contentData.id
+                        };
+                    });
                     //return data.content.byType.People._contentData.children.map(function (child) {
                     //    return child.node;
                     //});
