@@ -91,7 +91,8 @@
                         return {
                             name: item._contentData.name,
                             id: item._contentData.id,
-                            photoUrl: component.mediaAssetsRootUrl + item.photo._contentData.url
+                            photoUrl: component.mediaAssetsRootUrl + item.photo._contentData.url,
+                            departments: item.department
                         };
                     });
                 });
