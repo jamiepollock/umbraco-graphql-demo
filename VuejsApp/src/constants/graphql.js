@@ -86,3 +86,31 @@ query SingleVariableQuery ($searchLetter: String!) {
   }
 }
 `
+
+export const SIMPLE_QUERY_WITH_VARIABLES = gql`
+query MultipleVariableQuery ($searchTerm: String!, $orderBy: [PublishedContentOrder!]) {
+  content {
+    byType {
+      People(id: "1116") {
+        _contentData {
+          peopleContainsSearchTerm: children(filter: {name_contains: $searchTerm}, orderBy: $orderBy) {
+            items {
+              ... on Person {
+                _contentData {
+                  name
+                }
+                department
+                photo {
+                  _contentData {
+                  	url
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`

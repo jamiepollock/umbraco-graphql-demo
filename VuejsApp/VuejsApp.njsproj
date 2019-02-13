@@ -48,6 +48,7 @@
     </Content>
     <Content Include="src\pages\SimpleQuery.vue" />
     <Content Include="src\pages\Home.vue" />
+    <Content Include="src\pages\SimpleQueryWithVariables.vue" />
     <Content Include="src\pages\SimpleQueryWithVariable.vue" />
     <Content Include="src\pages\SimpleQueryWithFragments.vue">
       <SubType>Code</SubType>

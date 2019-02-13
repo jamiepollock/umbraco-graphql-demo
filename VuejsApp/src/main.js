@@ -33,6 +33,7 @@ import HomePage from './pages/Home.vue';
 import SimpleQueryPage from './pages/SimpleQuery.vue';
 import SimpleQueryWithFragmentsPage from './pages/SimpleQueryWithFragments.vue';
 import SimpleQueryWithVariablePage from './pages/SimpleQueryWithVariable.vue';
+import SimpleQueryWithVariablesPage from './pages/SimpleQueryWithVariables.vue';
 
 const props = {
     mediaAssetsRootUrl: process.env.VUE_APP_MEDIA_ASSETS_ROOT_URL
@@ -42,7 +43,8 @@ const routes = [
     { path: '/', component: HomePage },
     { path: '/SimpleQuery', component: SimpleQueryPage, props },
     { path: '/Fragments', component: SimpleQueryWithFragmentsPage, props },
-    { path: '/SimpleQueryWithVariable', component: SimpleQueryWithVariablePage, props }
+    { path: '/SimpleQueryWithVariable', component: SimpleQueryWithVariablePage, props },
+    { path: '/SimpleQueryWithVariables', component: SimpleQueryWithVariablesPage, props }
 ];
 
 const router = new VueRouter({
