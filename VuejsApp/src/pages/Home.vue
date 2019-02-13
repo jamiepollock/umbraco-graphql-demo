@@ -5,6 +5,7 @@
         <ul>
             <li><router-link to="/SimpleQuery">Simple Query</router-link></li>
             <li><router-link to="/Fragments">Simple Query (with Fragments)</router-link></li>
+            <li><router-link to="/SimpleQueryWithVariable">Simple Query (with Variable)</router-link></li>
         </ul>
     </div>
 </template>

@@ -1,4 +1,4 @@
-﻿// 1
+// 1
 import gql from 'graphql-tag'
 
 // 2
@@ -60,3 +60,31 @@ fragment SimplePerson on Person {
     id
   }
 }`
+
+export const SIMPLE_QUERY_WITH_VARIABLE = gql`
+query SingleVariableQuery ($searchLetter: String!) {
+  content {
+    byType {
+      People(id: "1116") {
+        _contentData {
+          peopleStartsWithLetter: children(filter: {name_starts_with: $searchLetter}, orderBy: name_ASC) {
+            items {
+              ... on Person {
+                _contentData {
+                  name
+                }
+                department
+                photo {
+                  _contentData {
+                  	url
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`

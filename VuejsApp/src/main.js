@@ -42,13 +42,15 @@ const apolloProvider = new VueApollo({
 import HomePage from './pages/Home.vue';
 import SimpleQueryPage from './pages/SimpleQuery.vue';
 import SimpleQueryWithFragmentsPage from './pages/SimpleQueryWithFragments.vue';
+import SimpleQueryWithVariablePage from './pages/SimpleQueryWithVariable.vue';
 
 const mediaAssetsRootUrl = process.env.VUE_APP_MEDIA_ASSETS_ROOT_URL;
 
 const routes = [
     { path: '/', component: HomePage },
     { path: '/SimpleQuery', component: SimpleQueryPage, props: { mediaAssetsRootUrl } },
-    { path: '/Fragments', component: SimpleQueryWithFragmentsPage, props: { mediaAssetsRootUrl } }
+    { path: '/Fragments', component: SimpleQueryWithFragmentsPage, props: { mediaAssetsRootUrl } },
+    { path: '/SimpleQueryWithVariable', component: SimpleQueryWithVariablePage, props: { mediaAssetsRootUrl } }
 ]
 
 const router = new VueRouter({
