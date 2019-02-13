@@ -1,4 +1,4 @@
-﻿<template>
+<template>
     <section class="people">
         <h2 class="is-size-2">People</h2>
         <div class="columns is-multiline" v-if="items.length > 0">
@@ -6,7 +6,11 @@
                 <Person v-bind:name="person.name" v-bind:photoUrl="person.photoUrl" v-bind:departments="person.departments" />
             </div>
         </div>
-        <p v-if="!items">Nobody here!</p>
+        <article class="message" v-if="!items || items.length === 0">
+            <div class="message-body">
+                Looks like nobody is here :(
+            </div>
+        </article>
     </section>
 </template>
 
