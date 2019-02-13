@@ -1,4 +1,4 @@
-// 1
+﻿// 1
 import gql from 'graphql-tag'
 
 // 2
@@ -7,7 +7,6 @@ query SimplePeopleQuery {
   content {
     byType {
       People(id: "1116") {
-        pageTitle
         _contentData {
           children {
             items {
@@ -36,7 +35,6 @@ query SimplePeopleQueryFragments {
   content {
     byType {
       People(id: "1116") {
-        pageTitle
         _contentData {
           children {
             items {
