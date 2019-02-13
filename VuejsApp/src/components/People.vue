@@ -1,6 +1,8 @@
-<template>
+﻿<template>
     <section class="people">
-        <h2 class="is-size-2">People</h2>
+        <div class="content">
+            <h2>People</h2>
+        </div>
         <div class="columns is-multiline" v-if="items.length > 0">
             <div class="column is-half" v-for="person in items" v-bind:key="person.id">
                 <Person v-bind:name="person.name" v-bind:photoUrl="person.photoUrl" v-bind:departments="person.departments" />

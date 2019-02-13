@@ -1,13 +1,14 @@
 ﻿<template>
     <div class="home">
-        <h1 class="is-size-1">Home</h1>
-
-        <ul>
-            <li><router-link to="/SimpleQuery">Simple Query</router-link></li>
-            <li><router-link to="/Fragments">Simple Query (with Fragments)</router-link></li>
-            <li><router-link to="/SimpleQueryWithVariable">Simple Query (with Variable)</router-link></li>
-            <li><router-link to="/SimpleQueryWithVariables">Simple Query (with Variables)</router-link></li>
-        </ul>
+        <div class="content">
+            <h1>Home</h1>
+            <ul>
+                <li><router-link to="/SimpleQuery">Simple Query</router-link></li>
+                <li><router-link to="/Fragments">Simple Query (with Fragments)</router-link></li>
+                <li><router-link to="/SimpleQueryWithVariable">Simple Query (with Variable)</router-link></li>
+                <li><router-link to="/SimpleQueryWithVariables">Simple Query (with Variables)</router-link></li>
+            </ul>
+        </div>
     </div>
 </template>
 

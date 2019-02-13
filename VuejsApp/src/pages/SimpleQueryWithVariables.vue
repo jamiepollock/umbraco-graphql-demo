@@ -1,6 +1,8 @@
 ﻿<template>
     <div class="test">
-        <h1 class="is-size-1">Simple Query with a Variable</h1>
+        <div class="content">
+            <h1>Simple Query with a Variable</h1>
+        </div>
         <form method="get" v-on:submit.prevent="search">
             <div class="field is-horizontal">
                 <div class="field-label is-normal">

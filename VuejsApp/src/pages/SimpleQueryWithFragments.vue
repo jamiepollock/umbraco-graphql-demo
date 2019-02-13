@@ -1,6 +1,8 @@
 ﻿<template>
     <div class="test">
-        <h1 class="is-size-1">Simple Query with Fragments</h1>
+        <div class="content">
+            <h1>Simple Query with Fragments</h1>
+        </div>
         <People v-bind:items="allPeople" />
     </div>
 </template>
