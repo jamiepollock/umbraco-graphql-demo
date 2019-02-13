@@ -9,6 +9,9 @@
             <div class="media">
                 <div class="media-content">
                     <p class="title is-4">{{name}}</p>
+                    <ul v-if="departments && departments.length > 0">
+                        <li v-for="(item, index) in departments" :key="`department-${index}`">{{ item }}</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -20,7 +23,8 @@
         name: 'Person',
         props: {
             name: String,
-            photoUrl: String
+            photoUrl: String,
+            departments: Array
         }
     };
 </script>
