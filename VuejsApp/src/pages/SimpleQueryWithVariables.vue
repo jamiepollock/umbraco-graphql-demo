@@ -1,7 +1,9 @@
 ﻿<template>
     <div class="test">
         <div class="content">
-            <h1>Simple Query with a Variable</h1>
+            <h1>Simple Query with a Variables</h1>
+            <p>A slightly more advanced dynamic query. This time we're passing a <code>String!</code> search term and a <code>[PublishedContentOrder!]</code> (represented in our variables as predefined string in our logic). This will order our matching results by name.</p>
+            <p>Enter some text in the input below to see all the Person document types that have a name that contains that search term.</p>
         </div>
         <form method="get" v-on:submit.prevent="search">
             <div class="field is-horizontal">

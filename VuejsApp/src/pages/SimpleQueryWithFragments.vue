@@ -2,6 +2,8 @@
     <div class="test">
         <div class="content">
             <h1>Simple Query with Fragments</h1>
+            <p>A variation of the <router-link to="/SimpleQuery">Simple Query example</router-link>. This time using a fragment to format the results of the query in the query.</p>
+            <p>In this example we're also omitting the <code>department</code> property of a Person document type.</p>
         </div>
         <People v-bind:items="allPeople" />
     </div>

@@ -2,6 +2,8 @@
     <div class="test">
         <div class="content">
             <h1>Simple Query with a Variable</h1>
+            <p>This is an example of using simple user input into make a simple query dynamic.</p>
+            <p>Enter a letter in the input below to see all the Person document types that have a name that starts with that letter.</p>
         </div>
         <form method="get" v-on:submit.prevent="search">
             <div class="field has-addons">

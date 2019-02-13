@@ -2,6 +2,7 @@
     <div class="home">
         <div class="content">
             <h1>Simple Query</h1>
+            <p>A simple example of pulling people back from Umbraco.</p>
         </div>
         <People v-bind:items="allPeople" />
     </div>
