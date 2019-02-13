@@ -44,14 +44,16 @@ import SimpleQueryPage from './pages/SimpleQuery.vue';
 import SimpleQueryWithFragmentsPage from './pages/SimpleQueryWithFragments.vue';
 import SimpleQueryWithVariablePage from './pages/SimpleQueryWithVariable.vue';
 
-const mediaAssetsRootUrl = process.env.VUE_APP_MEDIA_ASSETS_ROOT_URL;
+const props = {
+    mediaAssetsRootUrl: process.env.VUE_APP_MEDIA_ASSETS_ROOT_URL
+};
 
 const routes = [
     { path: '/', component: HomePage },
-    { path: '/SimpleQuery', component: SimpleQueryPage, props: { mediaAssetsRootUrl } },
-    { path: '/Fragments', component: SimpleQueryWithFragmentsPage, props: { mediaAssetsRootUrl } },
-    { path: '/SimpleQueryWithVariable', component: SimpleQueryWithVariablePage, props: { mediaAssetsRootUrl } }
-]
+    { path: '/SimpleQuery', component: SimpleQueryPage, props },
+    { path: '/Fragments', component: SimpleQueryWithFragmentsPage, props },
+    { path: '/SimpleQueryWithVariable', component: SimpleQueryWithVariablePage, props }
+];
 
 const router = new VueRouter({
     routes
