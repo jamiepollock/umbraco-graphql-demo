@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-image" v-if="photoUrl">
             <figure class="image is-4by3">
-                <img v-bind:src="photoUrl" alt="Photo image">
+                <img v-bind:src="photoUrl" v-bind:alt="`Photo of ${name}`">
             </figure>
         </div>
         <div class="card-content">
